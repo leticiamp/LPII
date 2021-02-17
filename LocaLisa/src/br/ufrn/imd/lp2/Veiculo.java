@@ -1,3 +1,5 @@
+package br.ufrn.imd.lp2;
+
 public class Veiculo {
     
     protected String marca;

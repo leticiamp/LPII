@@ -1,3 +1,5 @@
+package br.ufrn.imd.lp2;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 

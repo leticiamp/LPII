@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Animal/src"/>
+	<classpathentry kind="src" path="Escola/src"/>
+	<classpathentry kind="src" path="Gerente"/>
+	<classpathentry kind="src" path="LocaLisa"/>
+	<classpathentry kind="src" path="MaquinaRefrigerante"/>
+	<classpathentry excluding="src/" kind="src" path="SchoolSystem"/>
+	<classpathentry kind="src" path="SchoolSystem/src"/>
+	<classpathentry kind="src" path="Xadrez/src"/>
+	<classpathentry kind="output" path="Animal/bin"/>
+</classpath>

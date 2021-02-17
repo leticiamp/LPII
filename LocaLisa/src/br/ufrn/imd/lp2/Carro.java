@@ -1,3 +1,5 @@
+package br.ufrn.imd.lp2;
+
 public class Carro extends Veiculo {
     
     private double potenciaMotor;

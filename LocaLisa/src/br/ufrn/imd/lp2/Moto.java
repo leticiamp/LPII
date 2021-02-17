@@ -1,3 +1,5 @@
+package br.ufrn.imd.lp2;
+
 public class Moto extends Veiculo {
     
     public enum TipoPartida {
