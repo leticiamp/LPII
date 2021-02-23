@@ -4,9 +4,9 @@ public class Veiculo {
 
 	protected String dono;
 	protected String marca;
-	protected Integer anoFabricacao;
+	protected int anoFabricacao;
 
-	public Veiculo(String dono, String marca, Integer anoFabricacao) {
+	public Veiculo(String dono, String marca, int anoFabricacao) {
 		this.dono = dono;
 		this.marca = marca;
 		this.anoFabricacao = anoFabricacao;
@@ -28,11 +28,11 @@ public class Veiculo {
 		this.marca = marca;
 	}
 
-	public Integer getAnoFabricacao() {
+	public int getAnoFabricacao() {
 		return anoFabricacao;
 	}
 
-	public void setAnoFabricacao(Integer anoFabricacao) {
+	public void setAnoFabricacao(int anoFabricacao) {
 		this.anoFabricacao = anoFabricacao;
 	}
 

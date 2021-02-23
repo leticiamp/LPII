@@ -1,25 +1,26 @@
 package imd.oficina;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 
 public class Automovel extends Veiculo {
-
-	public ArrayList<Integer> oleoTrocado;
-
+	
+	private boolean oleoTrocado;
+	
 	public Automovel(String dono, String marca, int anoFabricacao, boolean oleoTrocado) {
 		super(dono, marca, anoFabricacao);
-		this.oleoTrocado = new ArrayList<Integer>();
 	}
 
-	/*public void trocarOleo(Automovel a) {
-		System.out.println("Oleo trocado!");
-		oleoTrocado.add(a.getAnoFabricacao());
-	}*/
+	public boolean isOleoTrocado() {
+		return oleoTrocado;
+	}
+
+	public void setOleoTrocado(boolean oleoTrocado) {
+		this.oleoTrocado = oleoTrocado;
+	}
 	
 	public void trocarOleo() {
-		System.out.println("Oleo trocado!");
-		oleoTrocado.add(getAnoFabricacao());
+	
+		this.oleoTrocado = true;
 	}
 
 	@Override
@@ -27,12 +28,7 @@ public class Automovel extends Veiculo {
 		System.out.println("Automovel esta limpo!");
 	}
 	
-	public class OrdenaAnoFabricacao implements Comparator<Automovel> {
+	public static Comparator<Automovel> comparatoAutomovelDesc = new Comparator<Automovel>() {
 		
-	    @Override
-	    public int compare(Automovel um, Automovel dois) {
-	    	
-	        return um.getAnoFabricacao() - dois.getAnoFabricacao();
-	    }
 	}
 }
