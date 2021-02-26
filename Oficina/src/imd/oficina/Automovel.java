@@ -28,7 +28,20 @@ public class Automovel extends Veiculo {
 		System.out.println("Automovel esta limpo!");
 	}
 	
-	public static Comparator<Automovel> comparatoAutomovelDesc = new Comparator<Automovel>() {
+	public static Comparator<Automovel> comparatorAutomovelDesc = new Comparator<Automovel>() {
 		
-	}
+		public int compare(Automovel a1, Automovel a2) {
+			
+			double x = a2.getAnoFabricacao() - a1.getAnoFabricacao();
+			if(x > 0) {
+				return 1;
+			}
+			else if(x == 0) {
+				return 0;
+			}
+			else {
+				return -1;
+			}
+		}
+	};
 }

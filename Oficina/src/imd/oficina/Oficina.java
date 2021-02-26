@@ -1,5 +1,7 @@
 package imd.oficina;
 
+import java.util.ArrayList;
+
 public class Oficina {
 	
 	BancoDeDados banco;
@@ -11,24 +13,29 @@ public class Oficina {
 	public void manutencao(Veiculo v) {
 
 		v.limparVeiculo();
-		if (v instanceof Automovel) {
-			trocarOleoUm((Automovel)v);
+		if(v instanceof Automovel && ((Automovel) v).isOleoTrocado() == false) {
+			trocarOleoAutomovel((Automovel)v);
 		}
 	}
 	
-	public void trocarOleoUm(Automovel a) {
+	public void manutencaoVeiculos(ArrayList<Veiculo> veiculos) {
+		
+		System.out.println("Manutencao dos veiculos");
+		for(Veiculo v : veiculos) {
+			manutencao(v);
+		}
+	}
+	
+	public void trocarOleoAutomovel(Automovel a) {
 		
 		a.trocarOleo();
-		banco.getAutomoveisOleoTrocado().add(a);
-		banco.getVeiculosOleoNaoTrocado().remove(a);
-		
 		System.out.println("Oleo trocado!");
 	}
 	
-	public void trocarOleo() {
-		for(Veiculo v : banco.getVeiculosOleoNaoTrocado()) {
-			if(v instanceof Automovel) {
-				trocarOleoUm((Automovel)v);
+	public void trocarOleoAutomoveis() {
+		for(Veiculo v : banco.getVeiculos()) {
+			if(v instanceof Automovel && ((Automovel) v).isOleoTrocado() == false) {
+				trocarOleoAutomovel((Automovel)v);
 			}
 		}
 	}
