@@ -1,50 +1,30 @@
 package imd.academia;
 
-import java.util.ArrayList;
-
 public class NatalFitness {
 	
-	private ArrayList<Recepcionista> recepcionistas;
-	private ArrayList<Professor> professores;
+	private BancoDeDados banco;
 	
 	public NatalFitness() {
-		this.recepcionistas = new ArrayList<Recepcionista>();
-		this.professores = new ArrayList<Professor>();
+		this.banco = new BancoDeDados();
 	}
 	
 	public void adicionarRecepcionista(Recepcionista r) {
-		this.recepcionistas.add(r);
+		this.banco.adicionarFuncionario(r);
 	}
 	
 	public void adicionarProfessor(Professor p) {
-		this.professores.add(p);
+		this.banco.adicionarFuncionario(p);
 	}
 	
 	public void listarRecepcionistas() {
-		
-		for(Recepcionista r : recepcionistas) {
-			r.printRecepcionista();
-		}
+		this.banco.listarRecepcionistas();
 	}
 	
-	public void listarProfessores() {
-		
-		for(Professor p : professores) {
-			p.printProfessor();
-		}
+	public void listarAtividades() {
+		this.banco.listarAtividades();
 	}
 	
-	//private ArrayList<Funcionario> funcionarios;
-	
-	/*public void listarFuncionarios() {
-		
-		for (Funcionario f : funcionarios) {
-			if(f instanceof Professor) {
-				f.printProfessor();
-			}
-			else if(f instanceof Recepcionista) {
-				f.printRecepcionista();
-			}
-		}
-	}*/
+	public void listarFuncionario() {
+		this.banco.listarFuncionarios();
+	}
 }

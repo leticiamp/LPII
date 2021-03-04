@@ -14,6 +14,7 @@ public class Aluno {
 	
 	public Aluno(String nome) {
 		this.nome = nome;
+		this.listaTreinos = new HashSet<String>();
 	}
 
 	public String getNome() {
@@ -22,5 +23,41 @@ public class Aluno {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	public void adicionarTreino(String treino) {
+		this.listaTreinos.add(treino);
+	}
+	
+	@Override
+	public String toString() {
+		
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("Aluno >>> ");
+		sb.append(this.nome + " ");
+		sb.append(treinosToString());
+		sb.append("\n");
+		
+		return sb.toString();
+	}
+	
+	private String treinosToString() {
+		
+		int contador = 0;
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("{");
+		for(String s : this.listaTreinos) {
+			sb.append(s);
+			if(contador < listaTreinos.size()-1) {
+				sb.append(", ");
+			}
+			else {
+				sb.append("}");
+			}
+			contador++;
+		}
+		return sb.toString();
 	}
 }

@@ -25,4 +25,9 @@ public class Funcionario {
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
+
+	@Override
+	public String toString() {
+		return "Funcionario [nome=" + nome + ", matricula=" + matricula + "]";
+	}
 }

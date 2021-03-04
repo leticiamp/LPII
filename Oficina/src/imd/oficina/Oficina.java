@@ -18,10 +18,10 @@ public class Oficina {
 		}
 	}
 	
-	public void manutencaoVeiculos(ArrayList<Veiculo> veiculos) {
+	public void manutencaoVeiculos() {
 		
 		System.out.println("Manutencao dos veiculos");
-		for(Veiculo v : veiculos) {
+		for(Veiculo v : this.banco.getVeiculos()) {
 			manutencao(v);
 		}
 	}
@@ -38,5 +38,28 @@ public class Oficina {
 				trocarOleoAutomovel((Automovel)v);
 			}
 		}
+	}
+	
+	public ArrayList<Automovel> getAutomoveisOleoTrocadoByAno() {
+		
+		ArrayList<Automovel> automoveis = new ArrayList<Automovel>();
+		
+		for(Veiculo v : banco.getVeiculos()) {
+			if(v instanceof Automovel && ((Automovel) v).isOleoTrocado() == true) {
+				automoveis.add((Automovel) v);
+			}
+		}
+		
+		return banco.ordenarLista(automoveis);
+	}
+	
+	public void adcionarVeiculo(Veiculo v) {
+
+		this.banco.adcionarVeiculo(v);
+	}
+
+	public void removerVeiculo(Veiculo v) {
+
+		this.banco.removerVeiculo(v);
 	}
 }

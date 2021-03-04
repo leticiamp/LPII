@@ -4,7 +4,6 @@ public class TestaOficina {
 
 	public static void main(String[] args) {
 		
-		BancoDeDados banco = new BancoDeDados();
 		Oficina oficina = new Oficina();
 		
 		Bicicleta bike1 = new Bicicleta("Daniel", "Fiat", 2011);
@@ -12,17 +11,16 @@ public class TestaOficina {
 		Automovel versa = new Automovel("Henrique", "Nissan", 2010, false);
 		Automovel clio = new Automovel("Leticia", "Renault", 2012, true);
 		
-		banco.adcionarVeiculo(versa);
-		banco.adcionarVeiculo(clio);
-		banco.adcionarVeiculo(bike1);
-		banco.adcionarVeiculo(bike2);
+		oficina.adcionarVeiculo(versa);
+		oficina.adcionarVeiculo(clio);
+		oficina.adcionarVeiculo(bike1);
+		oficina.adcionarVeiculo(bike2);
 		
-		System.out.println("\n########## Manutencao de veiculos ##########\n");
-		oficina.manutencao(bike1);
-		oficina.manutencao(bike2);
-		oficina.manutencao(versa);
-		oficina.manutencao(clio);
-		System.out.println("\n############################################\n");
+		oficina.manutencaoVeiculos();
+		System.out.println("### Lista Ordenada de Fabricacao ###");
+		for(Automovel a : oficina.getAutomoveisOleoTrocadoByAno()) {
+			System.out.println("Marca: " + a.marca + " Ano de Fabricacao: " + a.anoFabricacao);
+		}
 	}
 
 }
