@@ -1,4 +1,6 @@
-package br.ufrn.imd.lp.funcionario;
+package br.ufrn.imd.q1.controle;
+
+import br.ufrn.imd.q1.modelo.Funcionario;
 
 public class ControleBonificacao {
 

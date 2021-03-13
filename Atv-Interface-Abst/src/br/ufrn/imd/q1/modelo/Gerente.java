@@ -1,4 +1,4 @@
-package br.ufrn.imd.lp.funcionario;
+package br.ufrn.imd.q1.modelo;
 
 public class Gerente extends Funcionario {
 

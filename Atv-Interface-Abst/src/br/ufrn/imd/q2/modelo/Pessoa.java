@@ -1,4 +1,4 @@
-package br.ufrn.imd.lp.conta;
+package br.ufrn.imd.q2.modelo;
 
 public class Pessoa implements Tributavel {
 
@@ -42,7 +42,9 @@ public class Pessoa implements Tributavel {
 
 	@Override
 	public double calcularTributos() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		double valor = salario * 0.11;
+		
+		return valor;
 	}
 }

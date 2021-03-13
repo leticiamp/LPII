@@ -1,6 +1,7 @@
-package br.ufrn.imd.lp.funcionario;
+package br.ufrn.imd.q1.controle;
 
 import java.util.ArrayList;
+import br.ufrn.imd.q1.modelo.Funcionario;
 
 public class FuncionarioDAO {
 
@@ -23,7 +24,7 @@ public class FuncionarioDAO {
 			System.out.println("Nome...: " + f.getNome() + " - " + f.getClass());
 			System.out.println("CPF....: " + f.getCpf());
 			System.out.println("Salario: " + f.getSalario());
-			System.out.println("Bonos..: " + f.getBonificacao());
+			System.out.println("Bonus..: " + f.getBonificacao());
 		}
 		System.out.println("****************************************");
 		System.out.println("Total das bonificacoes.: " + bonos.getTotalBonificacoes());

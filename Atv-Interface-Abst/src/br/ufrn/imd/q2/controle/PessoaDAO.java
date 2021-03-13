@@ -1,6 +1,8 @@
-package br.ufrn.imd.lp.conta;
+package br.ufrn.imd.q2.controle;
 
 import java.util.ArrayList;
+
+import br.ufrn.imd.q2.modelo.Pessoa;
 
 public class PessoaDAO {
 
@@ -30,7 +32,7 @@ public class PessoaDAO {
 		
 		for (Pessoa p : pessoas) {
 			System.out.println("****************************************************");
-			System.out.println("Nome...: " + p.getNome() + " IRPF...: " + p.calcularTributos());
+			System.out.println("Nome...: " + p.getNome() + " IRPF...: " + GeradorImpostoRenda.calculaValorTotalTributo(p));
 		}
 	}
 }

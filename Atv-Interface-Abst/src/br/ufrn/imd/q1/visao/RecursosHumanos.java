@@ -1,4 +1,10 @@
-package br.ufrn.imd.lp.funcionario;
+package br.ufrn.imd.q1.visao;
+
+import br.ufrn.imd.q1.controle.FuncionarioDAO;
+import br.ufrn.imd.q1.modelo.Diretor;
+import br.ufrn.imd.q1.modelo.Gerente;
+import br.ufrn.imd.q1.modelo.Secretaria;
+
 
 public class RecursosHumanos {
 	

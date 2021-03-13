@@ -1,4 +1,4 @@
-package br.ufrn.imd.lp.conta;
+package br.ufrn.imd.q2.modelo;
 
 public interface Tributavel {
 

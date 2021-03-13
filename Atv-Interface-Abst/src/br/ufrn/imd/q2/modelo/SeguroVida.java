@@ -1,6 +1,6 @@
-package br.ufrn.imd.lp.conta;
+package br.ufrn.imd.q2.modelo;
 
-public class SeguroVida {
+public class SeguroVida implements Tributavel {
 	
 	private int numero;
 	private String beneficiado;
@@ -37,6 +37,14 @@ public class SeguroVida {
 	}
 	public void setTaxa(double taxa) {
 		this.taxa = taxa;
+	}
+
+	@Override
+	public double calcularTributos() {
+		
+		double valor = 31.5;
+		
+		return valor;
 	}
 	
 }
